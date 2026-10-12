@@ -95,6 +95,10 @@ go test ./...
 | [责任链模式 chain-of-responsibility](./chain-of-responsibility/) | 请求沿链条一个个试 | 中间件、审批流、参数校验 |
 | [模板方法模式 template-method](./template-method/) | 固定骨架，细节可替换 | 数据导入导出、支付流程 |
 
+### 🔧 并发专题（不是设计模式，但很重要）
+
+单例模式的地基是「并发安全」。建议学单例时顺手看这份：[并发专题 concurrency](./concurrency/) —— 讲 goroutine、数据竞争、三种解决方案（互斥锁 / 原子操作 / channel），以及 `sync.Once` 单例。
+
 ---
 
 ## 四、几句掏心窝的建议 💡
@@ -115,6 +119,7 @@ go test ./...
 DesignPatterns/
 ├── go.mod
 ├── README.md                 ← 你正在看的这份
+├── concurrency/              ← 并发专题（goroutine / sync.Once）
 ├── singleton/                ← 单例模式
 ├── factory/                  ← 工厂模式
 ├── builder/                  ← 建造者模式
